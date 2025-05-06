@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DİJİTAL DÜKKANIM - Butik & Bujiteri</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="site-logo">
+                <h1>DİJİTAL DÜKKANIM</h1>
+            </div>
+            </div>
+    </header>
+
+    <main class="main-layout" id="main-content-container">
+        <aside class="category-sidebar" id="category-sidebar">
+            <h2>Kategoriler</h2>
+            <ul>
+                <li><a href="#" data-category="cok-satanlar">Çok Satanlar</a></li>
+                <li><a href="#" data-category="butik">Butik</a></li>
+                <li class="subcategory"><a href="#" data-category="pijama-takimlari">Pijama Takımları</a></li>
+                <li class="subcategory"><a href="#" data-category="coraplar">Çoraplar</a></li>
+                <li class="subcategory"><a href="#" data-category="esarp-sallar">Eşarplar-Şallar</a></li>
+                <li><a href="#" data-category="bujiteri">Bujiteri</a></li>
+                <li class="subcategory"><a href="#" data-category="saat-koleksiyonu">Saat Koleksiyonu</a></li>
+                <li class="subcategory"><a href="#" data-category="yuzuk-koleksiyonu">Yüzük Koleksiyonu</a></li>
+                <li class="subcategory"><a href="#" data-category="bileklik-koleksiyonu">Bileklik Koleksiyonu</a></li>
+                <li class="subcategory"><a href="#" data-category="kolye-koleksiyonu">Kolye Koleksiyonu</a></li>
+                <li class="subcategory"><a href="#" data-category="kupe-koleksiyonu">Küpe Koleksiyonu</a></li>
+            </ul>
+        </aside>
+
+        <section class="content-area">
+
+            <div id="initial-content">
+                 <section class="hero-section">
+                    <h2>Hoş Geldiniz! En Yeni Butik ve Bujiteri Ürünlerini Keşfedin</h2>
+                    <p>Muhteşem indirimleri kaçırmayın!</p>
+                    <button class="cta-button">Şimdi Alışveriş Yap</button>
+                </section>
+
+                <section class="featured-products">
+                    <h2>Öne Çıkan Ürünler</h2>
+                    <div class="product-list">
+                         </div>
+                </section>
+            </div>
+
+            <div id="category-products" style="display: none;">
+                <h2>Seçilen Kategori Ürünleri</h2>
+                <div class="product-list">
+                     </div>
+            </div>
+
+             <div id="cart-page" style="display: none;">
+                 <h2>Sepetim</h2>
+                 <div class="cart-items-list">
+                     <p style="text-align:center;">Sepetiniz boş.</p>
+                 </div>
+                 <div class="cart-summary">
+                     <p>Toplam: <span id="cart-total">0.00 TL</span></p>
+                     <button id="clear-cart-button" class="cta-button">Sepeti Temizle</button>
+                 </div>
+             </div>
+
+             <div id="favorites-page" style="display: none;">
+                 <h2>Favorilerim</h2>
+                 <div class="favorite-items-list product-list">
+                      <p style="text-align:center;">Favorileriniz boş.</p>
+                 </div>
+             </div>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+             <p>Ek Footer Bilgileri</p>
+        </div>
+    </footer>
+
+    <nav class="bottom-navbar">
+        <a href="#initial-content" class="nav-button" data-target-page="initial-content">Anasayfa</a>
+        <a href="#" class="nav-button" id="toggle-categories-btn">Kategoriler</a>
+        <a href="#cart" class="nav-button" data-target-page="cart-page">Sepetim</a>
+        <a href="#account" class="nav-button" data-target-page="account-modal-trigger">Hesabım</a>
+        <a href="#favorites" class="nav-button" data-target-page="favorites-page">Favoriler</a>
+    </nav>
+
+     <div class="copyright-area">
+         <div class="container">
+            <p>© 2023 DİJİTAL DÜKKANIM Sitesi. Tüm Hakları Saklıdır.</p>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="loginModal">&times;</span>
+            <h2>Giriş Yap</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="login-email">E-posta:</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Şifre:</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit" class="modal-submit-button">Giriş Yap</button>
+            </form>
+            <p class="switch-form">Hesabın yok mu? <a href="#" id="showSignup">Kayıt Ol</a></p>
+
+            <div class="social-login">
+                <p>- Veya -</p>
+                <button class="gmail-login-button">
+                     <span class="social-icon material-icons">g_mobiledata</span> Gmail ile Giriş Yap
+                </button>
+                </div>
+             <div class="form-message" id="login-message"></div>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="signupModal">&times;</span>
+            <h2>Kayıt Ol</h2>
+            <form id="signupForm">
+                 <div class="form-group">
+                    <label for="signup-name">Adınız Soyadınız:</label>
+                    <input type="text" id="signup-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">E-posta:</label>
+                    <input type="email" id="signup-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Şifre:</label>
+                    <input type="password" id="signup-password" name="password" required minlength="6">
+                </div>
+                 <div class="form-group">
+                    <label for="signup-password-confirm">Şifre Tekrar:</label>
+                    <input type="password" id="signup-password-confirm" name="password_confirm" required minlength="6">
+                </div>
+                <button type="submit" class="modal-submit-button">Kayıt Ol</button>
+            </form>
+             <p class="switch-form">Zaten hesabın var mı? <a href="#" id="showLogin">Giriş Yap</a></p>
+
+             <div class="social-login">
+                <p>- Veya -</p>
+                <button class="gmail-login-button">
+                     <span class="social-icon material-icons">g_mobiledata</span> Gmail ile Kayıt Ol
+                </button>
+                </div>
+            <div class="form-message" id="signup-message"></div>
+        </div>
+    </div>
+
+    <div id="toastMessage" class="toast-message">
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
